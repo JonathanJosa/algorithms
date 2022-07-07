@@ -10,7 +10,7 @@ import numpy as np
 
 fig = plt.figure(figsize=(12, 12))
 fig.suptitle('Dataset', fontsize=11)
-timer = fig.canvas.new_timer(interval = 3000)
+timer = fig.canvas.new_timer(interval = 8000)
 timer.add_callback(plt.close)
 for i in range(20):
     plt.subplot(5, 4, i+1)
@@ -57,7 +57,7 @@ model_acc.compile(
 )
 
 model_dump.fit(x_train_norm, y_train_encoded, epochs=1)
-model_acc.fit(x_train_norm, y_train_encoded, epochs=1)
+model_acc.fit(x_train_norm, y_train_encoded, epochs=20)
 
 _, accuracy_dump = model_dump.evaluate(x_test_norm, y_test_encoded)
 _, accuracy_acc = model_acc.evaluate(x_test_norm, y_test_encoded)
@@ -99,6 +99,6 @@ plt.xlabel("dump predictions, train=1")
 
 plt.subplot(2, 1, 2)
 plt.plot(preds_acc[8])
-plt.xlabel("accurate predictions, train=12")
+plt.xlabel("accurate predictions, train=20")
 
 plt.show()
