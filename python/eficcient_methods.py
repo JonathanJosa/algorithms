@@ -42,3 +42,51 @@ def print_list(lst):
 
 def vacuum_permittivity():
     return 8.854e-12
+
+import statistics
+def mean_array(lst):
+    return statistics.mean(lst)
+
+import sys
+def enviroment_path():
+    return sys.path
+
+import this
+def easter_egg():
+    print(this.s)
+
+import timeit
+def time_print():
+    timeit.timeit("[i for i in range(100)]")
+
+import dis
+def disambler_fun():
+    dis.dis('math.pow(7,4)')
+
+def id_value():
+    print(id(1)) #id never changes
+
+def local():
+    print(locals())
+
+def libraries():
+    print("Visit: https://docs.python.org/3/library/")
+
+import pydoc
+def python_methods():
+    print("\n>>>Sys")
+    print(dir(sys))
+    print("\n>>>Pydoc")
+    print(dir(pydoc))
+
+if __name__ == '__main__':
+    print("\n\nInteractive python method")
+    while True:
+        try:
+            print(exec(input(">>>")))
+        except KeyboardInterrupt:
+            exit()
+        except SystemExit:
+            exit()
+        except:
+            print(sys.exc_info()[0])
