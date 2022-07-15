@@ -1,6 +1,12 @@
 import pytesseract
 from PIL import Image
 
+#pip3 install pytesseract
+#pip3 install tesseract
+
+#Linux dependencies:
+#sudo apt-get install libleptonica-dev tesseract-ocr libtesseract-dev python3-pil tesseract-ocr-eng tesseract-ocr-script-latn
+
 def binarize(file_name, threshold):
     # greyscale image using convert()
     output_image = Image.open(file_name).convert("L")
