@@ -1,0 +1,11 @@
+input()
+a=int(input(),2)
+n=0
+while(a>1):
+    if(a%2!=0):
+        a-=1
+        n+=1
+        continue
+    a=a//2
+    n+=1
+print(n)
