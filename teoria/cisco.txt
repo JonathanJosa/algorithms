@@ -1,0 +1,4 @@
+sudo minicom -s
+sudo minicom
+sudo dmesg | grep tty
+setserial -g /dev/ttyS0
